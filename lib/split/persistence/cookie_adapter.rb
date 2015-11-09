@@ -30,7 +30,8 @@ module Split
       def set_cookie(value)
         @cookies[:split] = {
           :value => JSON.generate(value),
-          :expires => @expires
+          :expires => @expires,
+          :domain => :all
         }
       end
 
